@@ -28,11 +28,3 @@ Proyecto CRUD completo para gestionar personas, desarrollado con **Spring Boot**
 - Maven
 
 
-
-
-##  Cómo Ejecutar el Proyecto
-
-### 1. Clonar el repositorio
-```bash
-git clone https://github.com/Ignaciobr/CRUD-Personas.git
-cd CRUD-Personas
