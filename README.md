@@ -1,23 +1,38 @@
 # CRUD Personas - Spring Boot
 
-Proyecto CRUD realizado con:
+Proyecto CRUD completo para gestionar personas, desarrollado con **Spring Boot**.
 
-- Java
-- Spring Boot
-- JPA / Hibernate
-- MySQL
+## Características
+
+- Crear, leer, actualizar y eliminar personas (CRUD)
+- Persistencia con JPA + Hibernate
+- Base de datos MySQL
+- Validaciones básicas
+- Excepciones personalizadas
+
+##  Tecnologías Utilizadas
+
+- **Java 26**
+- **Spring Boot 4.0.6**
+- **Spring Web**
+- **Spring Data JPA + Hibernate**
+- **MySQL**
+- **Maven**
+- **Lombok**
+- **Postman**
+
+## Requisitos Previos
+
+- Java 26 o superior
+- MySQL 8 o 9
 - Maven
 
-## Endpoints
 
-GET /personas/traer
-POST /personas/crear
-PUT /personas/editar/{id}
-DELETE /personas/borrar/{id}
 
-## Tecnologías
 
-- Spring Web
-- Spring Data JPA
-- MySQL Driver
-- Lombok
+##  Cómo Ejecutar el Proyecto
+
+### 1. Clonar el repositorio
+```bash
+git clone https://github.com/Ignaciobr/CRUD-Personas.git
+cd CRUD-Personas
