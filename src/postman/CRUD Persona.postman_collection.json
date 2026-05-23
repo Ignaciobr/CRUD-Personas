@@ -1,0 +1,143 @@
+{
+  "info": {
+    "_postman_id": "f8ff3e4a-80f5-41c0-9096-41d781337763",
+    "name": "CRUD Persona",
+    "description": "### Welcome to Postman! This is your first collection.\n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests  \n• Test your API in real-world scenarios  \n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54878399",
+    "_collection_link": "https://go.postman.co/collection/54878399-f8ff3e4a-80f5-41c0-9096-41d781337763?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "localhost:8080/personas/traer",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/personas/traer",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "personas",
+            "traer"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/personas/crear",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Successful POST request\", function () {",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+              "});",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"nombre\" : \"Ignacio\",\n    \"apellido\" : \"Bravo\",\n    \"edad\" : 26\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/personas/crear",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "personas",
+            "crear"
+          ]
+        },
+        "description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/personas/borrar/(poner id para borraR)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/personas/borrar/",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "personas",
+            "borrar",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/personas/editar/(poner id a editar)",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/personas/editar/2?id=2&nombre=Lucila&apellido=Vinay&edad=20",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "personas",
+            "editar",
+            "2"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "2"
+            },
+            {
+              "key": "nombre",
+              "value": "Lucila"
+            },
+            {
+              "key": "apellido",
+              "value": "Vinay"
+            },
+            {
+              "key": "edad",
+              "value": "20"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
